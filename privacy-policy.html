@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas de Privacidad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --text-color: #2b2d42;
+            --light-bg: #f8f9fa;
+            --border-color: #e9ecef;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: #ffffff;
+            background-image: 
+                linear-gradient(90deg, #f8f9fa 2px, transparent 2px),
+                linear-gradient(#f8f9fa 2px, transparent 2px);
+            background-size: 50px 50px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .highlight-box {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-color);
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-box:hover {
+            transform: translateX(10px);
+            background: #f1f3f5;
+        }
+
+        ul li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: var(--light-bg);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-item:hover {
+            transform: scale(1.02);
+            background: #f1f3f5;
+        }
+
+        .contact-item i {
+            font-size: 1.8em;
+            color: var(--accent-color);
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            background: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Política de Privacidad de CalculadoraMTP</h1>
+            <p>Última actualización: Mayo 2024</p>
+        </header>
+
+        <div class="card">
+            <h2><i class="fas fa-info-circle"></i> Introducción</h2>
+            <div class="highlight-box">
+                <p>En CalculadoraMTP, respetamos y valoramos la privacidad de nuestros usuarios. Esta política de privacidad tiene como propósito informar a los usuarios sobre cómo recopilamos, utilizamos, almacenamos y protegemos su información personal en nuestra aplicación.</p>
+                <p>CalculadoraMTP está diseñada exclusivamente para el uso en la unidad educativa Montepiedra, y su principal objetivo es mejorar la experiencia educativa y proporcionar herramientas de apoyo a los estudiantes.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-database"></i> Recopilación de Información</h2>
+            <p>CalculadoraMTP limita la recopilación de información personal de sus usuarios y no solicita datos sensibles innecesarios. Sin embargo, para brindar un mejor servicio y personalizar la experiencia de uso, es posible que se recopilen:</p>
+            <ul>
+                <li>Información técnica: Datos sobre el dispositivo utilizado, como el sistema operativo, el tipo de navegador y la dirección IP.</li>
+                <li>Datos de uso: Información sobre cómo los usuarios interactúan con la aplicación, incluyendo las funciones más utilizadas, la frecuencia de uso, y errores o problemas técnicos.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-tasks"></i> Finalidad del Uso de la Información</h2>
+            <div class="highlight-box">
+                <ul>
+                    <li>Optimización de la aplicación: Analizar cómo los usuarios interactúan con la aplicación para mejorar las funciones.</li>
+                    <li>Personalización del contenido: Adaptar la experiencia de acuerdo a las necesidades del usuario.</li>
+                    <li>Soporte técnico: Proporcionar asistencia y resolver problemas técnicos.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-user-shield"></i> No se Comparte Información con Terceros</h2>
+            <div class="highlight-box">
+                <p>CalculadoraMTP no comparte, vende ni distribuye información personal de sus usuarios a terceros. Toda la información recopilada se maneja de forma interna y exclusiva para los fines educativos y de mejora de la aplicación.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-shield-alt"></i> Seguridad de los Datos</h2>
+            <ul>
+                <li>Cifrado de datos: Los datos transmitidos se cifran para evitar accesos no autorizados.</li>
+                <li>Almacenamiento seguro: Los datos se almacenan en servidores seguros con medidas de protección.</li>
+                <li>Control de acceso: Solo el personal autorizado tiene acceso a la información.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-child"></i> Uso por Menores de Edad</h2>
+            <div class="highlight-box">
+                <p>CalculadoraMTP está destinada exclusivamente a usuarios de 13 años o mayores. No permitimos el acceso ni el uso de la aplicación a menores de 13 años en cumplimiento con las leyes de protección de privacidad infantil.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-user-check"></i> Derechos de los Usuarios</h2>
+            <p>Los usuarios tienen derecho a:</p>
+            <ul>
+                <li>Acceder a su información personal</li>
+                <li>Actualizar sus datos</li>
+                <li>Eliminar su información</li>
+                <li>Solicitar información adicional sobre el manejo de datos</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-envelope"></i> Contacto</h2>
+            <p>Si tienes preguntas o inquietudes sobre esta Política de Privacidad, contáctanos:</p>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>elidevosdm@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        const scrollBtn = document.querySelector('.scroll-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html> 
